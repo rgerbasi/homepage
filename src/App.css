@@ -1,11 +1,10 @@
+/*
 .App {
   text-align: center;
 }
+*/
 
-.Links li {
-  display: inline-block;
-  padding: 0 15px;
-}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
