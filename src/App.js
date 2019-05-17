@@ -14,7 +14,7 @@ import {
 import Home from './Home'
 import Projects from './Projects'
 import Contact from './Contact'
-
+import About from './About'
 //import './App.css'
 
 class App extends Component{
@@ -28,6 +28,7 @@ class App extends Component{
         <Navbar color="light" light expand>
           <NavbarBrand href="/">Rodrigo Gerbasi</NavbarBrand>
           <Nav className="ml-auto" navbar>
+            <NavLink href="/">Home</NavLink>
             <NavLink href="/projects" >Projects</NavLink>
             <NavLink href="/contact">Contact</NavLink>
             <NavLink href="/about">About</NavLink> 
@@ -39,12 +40,14 @@ class App extends Component{
           <Route path="/" exact component={Home}/>
           <Route path="/projects" component={Projects}/>
           <Route path="/contact" component={Contact}/>
+          <Route path="/about" component={About}/>
         </Switch>
 
 
         <Navbar color="light" light expand fixed="bottom">
           <NavbarBrand href="/">Links</NavbarBrand>
           <Nav className="ml-auto" navbar>
+            <NavLink href="/">Home</NavLink>
             <NavLink href="/projects" >Projects</NavLink>
             <NavLink href="/contact">Contact</NavLink>
             <NavLink href="/about">About</NavLink> 
