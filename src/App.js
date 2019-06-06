@@ -5,7 +5,8 @@ import {
   Navbar,
   NavbarBrand,
   NavLink,
-  NavItem,
+  Dropdown,
+  DropdownMenu,
   Container,
   Row,
   Col
@@ -18,15 +19,45 @@ import About from './About'
 //import './App.css'
 
 class App extends Component{
-  state = {
-    curpath: "/",
+  constructor(props){
+    super(props)
+    this.state ={
+      curpath: '/',
+      dropdownOpen: false,
+    }
   }
+  /*
+  toggleTop(e){
+    console.log('SHIIIIIIT')
+    this.setState(prevSt => ({
+      topDropdownOpen: !prevSt.topDropdownOpen
+    }))
+  }
+  topOnMouseEnter(e){
+    this.setState({topDropdownOpen:true})
+  }
+  topOnMouseLeave(e){
+    this.setState({topDropdownOpen:false})
+  }
+
+  WORK ON THE DROP DOWN MENU NEXT TIME
+*/
 
   render(){
     return(
       <div className="App" >
         <Navbar color="light" light expand>
-          <NavbarBrand href="/">Rodrigo Gerbasi</NavbarBrand>
+          
+              <Dropdown isOpen={this.state.topDropdownOpen} toggle={(e) => this.toggleTop(e)} onMouseEnter={this.topOnMouseEnter} onMouseLeave={this.topOnMouseLeave}>
+              
+              <NavbarBrand onMouseEnter={this.onMouseEnter} onMouseLeave={this.topOnMouseLeave} data-toggle="dropdown">Rodrigo Gerbasi</NavbarBrand>
+
+
+                <DropdownMenu>
+                  <h1>hhh</h1>
+                  <h2>reee</h2>
+                </DropdownMenu>
+              </Dropdown>
           <Nav className="ml-auto" navbar>
             <NavLink href="/">Home</NavLink>
             <NavLink href="/projects" >Projects</NavLink>

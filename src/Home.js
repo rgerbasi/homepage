@@ -35,9 +35,7 @@ class Home extends Component {
                     <br/>
                     <Container>
                     
-                    <div className="cheer">
-                    Cheerstuff
-                    </div>
+                  
                     </Container>
 
 
@@ -46,6 +44,8 @@ class Home extends Component {
         )
     }
 }
+
+//todo in the future maybe, pull images from my instagram 8^)
 
 const images = [img0,img1,img2,img3,img4,img5,img6]
 

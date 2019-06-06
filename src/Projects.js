@@ -40,6 +40,7 @@ class Projects extends Component {
 
         }
     }
+    
     toggle () {
         this.setState(prevSt => ({
             modalOpen: !prevSt.modalOpen,
