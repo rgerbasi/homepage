@@ -6,83 +6,50 @@ import {
     Col
 } from 'reactstrap'
 
+
+import BackgroundSlider from 'react-background-slider'
+import img0 from './backgroundimages/me0.jpg'
+import img1 from './backgroundimages/me1.jpg'
+import img2 from './backgroundimages/me2.jpg'
+import img3 from './backgroundimages/me3.jpg'
+import img4 from './backgroundimages/me4.jpg'
+import img5 from './backgroundimages/me5.jpg'
+import img6 from './backgroundimages/m36.png'
+
 class Home extends Component {
 
     render() {
         
         return(
             <div className="home" >
-                <br/>
-                <Container>
-                <Row>
-                    <Col>Individual studying Computer Science with a concentration in Computer Graphics who is also a cheerleader at Purdue University.</Col>
-                </Row>
-                </Container>
-                <br/>
-
-                <Container>
-                    <Row>
-                        <Col><h1>
-                            Computer Science courses taken
-                        </h1></Col>
-
-                    </Row>
-                    <div className="classes-taken">
+                <BackgroundSlider images={images} />
+                    <br/>
+                    <Container style={{textAlign:'left',paddingTop:'10%',color:'white', float:'left', display:'block'}}>
+                    <h1 style={{width:'100%',height:'50%', }}>
+                    <b>Rodrigo Gerbasi</b>
+                    </h1>
+                    <h2 style={{fontSize:'75%',}}>
+                    Student Athlete in Computer Science
+                    </h2>
+                    </Container>
+                    <br/>
+                    <Container>
                     
-                        <Row>
-                            <Col>CS 180: Problem Solving and Object-Oriented Programming (Java)</Col>
-                        </Row>
-                        <Row>
-                            <Col>CS 182: Foundations of Computer Science (Discrete Math)</Col>
-                        </Row>
-                        <Row>
-                            <Col>CS 240: Programming in C</Col>
-                        </Row>
-                        <Row>
-                            <Col>CS 250: Computer Architecture</Col>
-                        </Row>
-                        
+                    <div className="cheer">
+                    Cheerstuff
                     </div>
-                </Container>
+                    </Container>
 
-                <Container>
-                    <Row>
-                        <Col></Col><h1>
-                            Classes in progress
-                        </h1>
-                    </Row>
-                    <div className="classes-inprogress">
-                        <Row>
-                            <Col></Col>Stat 350: Intro to Statistics
-                        </Row>
-                        <Row>
-                            <Col></Col>CS 251: Data Structures And Algorithms
-                        </Row>
-                        <Row>
-                            <Col></Col>MA 265: Rownear Algebra
-                        </Row>
-                        <Row>
-                            <Col></Col> PSY 120: Elementary Psychology
-                        </Row>
-                        <Row>
-                            <Col></Col>COM 217: Science Writing and Presentation
-                        </Row>
-                    
-                    </div>
-                </Container>
-                <br/>
-                <Container>
-                
-                <div className="cheer">
-                Cheerstuff
-                </div>
-                </Container>
-                
+
 
             </div>
         )
     }
 }
+
+const images = [img0,img1,img2,img3,img4,img5,img6]
+
+
 
 
 export default Home
