@@ -7,10 +7,24 @@ import {
   NavLink,
   Dropdown,
   DropdownMenu,
+  DropdownItem,
+  DropdownToggle,
   Container,
   Row,
   Col
 } from 'reactstrap'
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faYoutube,
+  faInstagram,
+  faGithub,
+  faLinkedin,
+  faFacebook,
+  faSnapchat,
+  faGit
+
+} from '@fortawesome/free-brands-svg-icons'
 
 import Home from './Home'
 import Projects from './Projects'
@@ -26,38 +40,71 @@ class App extends Component{
       dropdownOpen: false,
     }
   }
-  /*
+  
   toggleTop(e){
     console.log('SHIIIIIIT')
     this.setState(prevSt => ({
       topDropdownOpen: !prevSt.topDropdownOpen
     }))
   }
-  topOnMouseEnter(e){
+  topOnMouseEnter(){
     this.setState({topDropdownOpen:true})
+    console.log('fuck')
   }
-  topOnMouseLeave(e){
+  topOnMouseLeave(){
     this.setState({topDropdownOpen:false})
+    console.log('nooo')
+  }
+  botOnMouseEnter(){
+    this.setState({botDropdownOpen:true})
+    console.log('fuck part 2')
+  }
+  botOnMouseLeave(){
+    this.setState({botDropdownOpen:false})
+    console.log('nooo part 2')
   }
 
-  WORK ON THE DROP DOWN MENU NEXT TIME
-*/
+  
+
 
   render(){
     return(
       <div className="App" >
         <Navbar color="light" light expand>
           
-              <Dropdown isOpen={this.state.topDropdownOpen} toggle={(e) => this.toggleTop(e)} onMouseEnter={this.topOnMouseEnter} onMouseLeave={this.topOnMouseLeave}>
+              <Dropdown 
+                isOpen={this.state.topDropdownOpen} 
+                toggle={() => this.toggleTop()} 
+               onMouseEnter={() => this.topOnMouseEnter()} onMouseLeave={()=>this.topOnMouseLeave()}>
               
-              <NavbarBrand onMouseEnter={this.onMouseEnter} onMouseLeave={this.topOnMouseLeave} data-toggle="dropdown">Rodrigo Gerbasi</NavbarBrand>
-
+              <DropdownToggle 
+                 data-toggle="dropdown" tag="span" >
+                <NavbarBrand >
+                  Rodrigo Gerbasi
+                </NavbarBrand>
+               </DropdownToggle>
 
                 <DropdownMenu>
-                  <h1>hhh</h1>
-                  <h2>reee</h2>
+                  <DropdownItem href="">
+                    <FontAwesomeIcon icon={faGithub} size="2x"/>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <FontAwesomeIcon icon={faLinkedin} size="2x"/>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <FontAwesomeIcon icon={faFacebook} size="2x"/>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <FontAwesomeIcon icon={faInstagram} size="2x"/>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <FontAwesomeIcon icon={faSnapchat} size="2x"/>
+                  </DropdownItem>
+                  
+
                 </DropdownMenu>
               </Dropdown>
+
           <Nav className="ml-auto" navbar>
             <NavLink href="/">Home</NavLink>
             <NavLink href="/projects" >Projects</NavLink>
@@ -66,7 +113,6 @@ class App extends Component{
           </Nav>
         </Navbar>
 
-        
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/projects" component={Projects}/>
@@ -74,9 +120,39 @@ class App extends Component{
           <Route path="/about" component={About}/>
         </Switch>
 
-
         <Navbar color="light" light expand fixed="bottom">
-          <NavbarBrand href="/">Links</NavbarBrand>
+          
+        <Dropdown 
+                isOpen={this.state.botDropdownOpen} 
+                toggle={() => this.toggleBot()} 
+               onMouseEnter={() => this.botOnMouseEnter()} onMouseLeave={()=>this.botOnMouseLeave()}>
+              
+              <DropdownToggle 
+                 data-toggle="dropdown" tag="span" >
+                <NavbarBrand >
+                  Links
+                </NavbarBrand>
+               </DropdownToggle>
+             
+
+
+                <DropdownMenu>
+
+                  <DropdownItem href="www.google.com">
+                    Snapchat
+                    <img src="./icons/ghub.png" alt=""/>
+                  </DropdownItem>
+                  <DropdownItem>
+                    Github
+                  </DropdownItem>
+                  <DropdownItem>
+
+                  </DropdownItem>
+
+                </DropdownMenu>
+            </Dropdown>
+
+          
           <Nav className="ml-auto" navbar>
             <NavLink href="/">Home</NavLink>
             <NavLink href="/projects" >Projects</NavLink>
