@@ -22,7 +22,7 @@ import {
   faLinkedin,
   faFacebook,
   faSnapchat,
-  faGit
+  
 
 } from '@fortawesome/free-brands-svg-icons'
 
@@ -31,7 +31,6 @@ import Projects from './Projects'
 import Contact from './Contact'
 import About from './About'
 //import './App.css'
-
 class App extends Component{
   constructor(props){
     super(props)
@@ -40,7 +39,6 @@ class App extends Component{
       dropdownOpen: false,
     }
   }
-  
   toggleTop(e){
     console.log('SHIIIIIIT')
     this.setState(prevSt => ({
@@ -64,8 +62,6 @@ class App extends Component{
     console.log('nooo part 2')
   }
 
-  
-
 
   render(){
     return(
@@ -85,23 +81,27 @@ class App extends Component{
                </DropdownToggle>
 
                 <DropdownMenu>
-                  <DropdownItem href="">
+                  <DropdownItem style={{float:'left',}} href="">
                     <FontAwesomeIcon icon={faGithub} size="2x"/>
+                    <p style={{float:'right',padding:'5%', paddingLeft:'4%'}}>Github</p>
                   </DropdownItem>
-                  <DropdownItem>
+                  <DropdownItem style={{float:'left',}}>
                     <FontAwesomeIcon icon={faLinkedin} size="2x"/>
+                    <p style={{float:'right',padding:'5%', paddingLeft:'5%'}}>LinkedIn</p>
                   </DropdownItem>
-                  <DropdownItem>
+                  <DropdownItem style={{float:'left',}}> 
                     <FontAwesomeIcon icon={faFacebook} size="2x"/>
+                    <p style={{float:'right',padding:'5%', paddingLeft:'4.5%'}}>Facebook</p>
                   </DropdownItem>
-                  <DropdownItem>
+                  <DropdownItem style={{float:'left',}}>
                     <FontAwesomeIcon icon={faInstagram} size="2x"/>
+                    <p style={{float:'right',padding:'5%', paddingLeft:'5%'}}>Instagram</p>
                   </DropdownItem>
-                  <DropdownItem>
+                  <DropdownItem style={{float:'left',}}>
                     <FontAwesomeIcon icon={faSnapchat} size="2x"/>
+                    <p style={{float:'right',padding:'5%', paddingLeft:'4%'}}>Snapchat</p>
                   </DropdownItem>
-                  
-
+                
                 </DropdownMenu>
               </Dropdown>
 
