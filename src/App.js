@@ -81,27 +81,26 @@ class App extends Component{
                </DropdownToggle>
 
                 <DropdownMenu>
-                  <DropdownItem style={{float:'left',}} href="">
+                <DropdownItem style={{float:'left',}} href="https://github.com/rgerbasi">
                     <FontAwesomeIcon icon={faGithub} size="2x"/>
                     <p style={{float:'right',padding:'5%', paddingLeft:'4%'}}>Github</p>
                   </DropdownItem>
-                  <DropdownItem style={{float:'left',}}>
+                  <DropdownItem style={{float:'left',}} href="https://www.linkedin.com/in/rgerbasi/">
                     <FontAwesomeIcon icon={faLinkedin} size="2x"/>
                     <p style={{float:'right',padding:'5%', paddingLeft:'5%'}}>LinkedIn</p>
                   </DropdownItem>
-                  <DropdownItem style={{float:'left',}}> 
+                  <DropdownItem style={{float:'left',}} href="https://www.facebook.com/raxos123"> 
                     <FontAwesomeIcon icon={faFacebook} size="2x"/>
                     <p style={{float:'right',padding:'5%', paddingLeft:'4.5%'}}>Facebook</p>
                   </DropdownItem>
-                  <DropdownItem style={{float:'left',}}>
+                  <DropdownItem style={{float:'left',}} href="https://www.instagram.com/rgerbasi98/">
                     <FontAwesomeIcon icon={faInstagram} size="2x"/>
                     <p style={{float:'right',padding:'5%', paddingLeft:'5%'}}>Instagram</p>
                   </DropdownItem>
-                  <DropdownItem style={{float:'left',}}>
+                  <DropdownItem style={{float:'left',}} href="https://www.snapchat.com/add/raon31/">
                     <FontAwesomeIcon icon={faSnapchat} size="2x"/>
                     <p style={{float:'right',padding:'5%', paddingLeft:'4%'}}>Snapchat</p>
                   </DropdownItem>
-                
                 </DropdownMenu>
               </Dropdown>
 
@@ -133,24 +132,29 @@ class App extends Component{
                   Links
                 </NavbarBrand>
                </DropdownToggle>
-             
-
-
                 <DropdownMenu>
-
-                  <DropdownItem href="www.google.com">
-                    Snapchat
-                    <img src="./icons/ghub.png" alt=""/>
+                <DropdownItem style={{float:'left',}} href="https://github.com/rgerbasi">
+                    <FontAwesomeIcon icon={faGithub} size="2x"/>
+                    <p style={{float:'right',padding:'5%', paddingLeft:'4%'}}>Github</p>
                   </DropdownItem>
-                  <DropdownItem>
-                    Github
+                  <DropdownItem style={{float:'left',}} href="https://www.linkedin.com/in/rgerbasi/">
+                    <FontAwesomeIcon icon={faLinkedin} size="2x"/>
+                    <p style={{float:'right',padding:'5%', paddingLeft:'5%'}}>LinkedIn</p>
                   </DropdownItem>
-                  <DropdownItem>
-
+                  <DropdownItem style={{float:'left',}} href="https://www.facebook.com/raxos123"> 
+                    <FontAwesomeIcon icon={faFacebook} size="2x"/>
+                    <p style={{float:'right',padding:'5%', paddingLeft:'4.5%'}}>Facebook</p>
                   </DropdownItem>
-
+                  <DropdownItem style={{float:'left',}} href="https://www.instagram.com/rgerbasi98/">
+                    <FontAwesomeIcon icon={faInstagram} size="2x"/>
+                    <p style={{float:'right',padding:'5%', paddingLeft:'5%'}}>Instagram</p>
+                  </DropdownItem>
+                  <DropdownItem style={{float:'left',}} href="https://www.snapchat.com/add/raon31/">
+                    <FontAwesomeIcon icon={faSnapchat} size="2x"/>
+                    <p style={{float:'right',padding:'5%', paddingLeft:'4%'}}>Snapchat</p>
+                  </DropdownItem>
                 </DropdownMenu>
-            </Dropdown>
+          </Dropdown>
 
           
           <Nav className="ml-auto" navbar>
