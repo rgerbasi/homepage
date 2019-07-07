@@ -9,14 +9,12 @@ import {
   DropdownMenu,
   DropdownItem,
   DropdownToggle,
-  Container,
-  Row,
-  Col
+  
 } from 'reactstrap'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faYoutube,
+  
   faInstagram,
   faGithub,
   faLinkedin,
@@ -107,7 +105,7 @@ class App extends Component{
           <Nav className="ml-auto" navbar>
             <NavLink href="/">Home</NavLink>
             <NavLink href="/projects" >Projects</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
+       
             <NavLink href="/about">About</NavLink> 
           </Nav>
         </Navbar>
@@ -160,7 +158,7 @@ class App extends Component{
           <Nav className="ml-auto" navbar>
             <NavLink href="/">Home</NavLink>
             <NavLink href="/projects" >Projects</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
+            
             <NavLink href="/about">About</NavLink> 
           </Nav>
         
@@ -176,6 +174,9 @@ class App extends Component{
 export default App;
 
 /*
+
+     <NavLink href="/contact">Contact</NavLink>
+
   render(){
     return(
       <div className={css(styles.App)} >
