@@ -26,7 +26,7 @@ import {
 
 import Home from './Home'
 import Projects from './Projects'
-import Contact from './Contact'
+//import Contact from './Contact'
 import About from './About'
 //import './App.css'
 class App extends Component{
@@ -103,17 +103,15 @@ class App extends Component{
               </Dropdown>
 
           <Nav className="ml-auto" navbar>
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/projects" >Projects</NavLink>
-       
+            <NavLink href="/homepage">Home</NavLink>
+            <NavLink href="/homepage/projects" >Projects</NavLink>
             <NavLink href="/about">About</NavLink> 
           </Nav>
         </Navbar>
 
         <Switch>
-          <Route path="/" exact component={Home}/>
-          <Route path="/projects" component={Projects}/>
-          <Route path="/contact" component={Contact}/>
+          <Route path="/homepage" exact component={Home}/>
+          <Route path="/homepage/projects" component={Projects}/>
           <Route path="/about" component={About}/>
         </Switch>
 
@@ -158,7 +156,6 @@ class App extends Component{
           <Nav className="ml-auto" navbar>
             <NavLink href="/">Home</NavLink>
             <NavLink href="/projects" >Projects</NavLink>
-            
             <NavLink href="/about">About</NavLink> 
           </Nav>
         
