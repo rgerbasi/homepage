@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 //import { Route } from 'react-router-dom'
-import {
-    Container,
-    Row,
-    Col
-} from 'reactstrap'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+// import {
+//     Container,
+//     Row,
+//     Col
+// } from 'reactstrap'
 
 class About extends Component{
 

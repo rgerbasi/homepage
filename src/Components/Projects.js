@@ -1,17 +1,23 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React, { Component } from 'react'
+
+import Container from 'react-bootstrap/Container'
+import Table from 'react-bootstrap/Table'
+import Modal from 'react-bootstrap/Modal'
 //import { Route, Switch } from 'react-router-dom'
-import { 
-    Table,
-    Container,
+
+// import { 
+//     Table,
+//     Container,
     
-    Modal,
-    ModalHeader,
-    ModalBody,
+//     Modal,
+//     ModalHeader,
+//     ModalBody,
     
 
-} from 'reactstrap'
-import YoutubePlayer from 'react-player'
+// } from 'reactstrap'
+
+//import YoutubePlayer from 'react-player'
 
 
 class Projects extends Component {
@@ -87,25 +93,25 @@ class Projects extends Component {
             </Table>
             
             </Container>
-
+{/* 
             // modals
 
             //needed to bind this to each modal so ()=> this.toggle
-            //server
+            //server */}
 
 
             <Modal isOpen={this.state.modalOpen && this.select("ircserver")} toggle={()=> this.toggle()}  className="ircserver" size="lg" scrollable>
-                <ModalHeader toggle={()=>this.toggle()} >IRC Server and GUI</ModalHeader>
-                <ModalBody>
+                <Modal.Header toggle={()=>this.toggle()} >IRC Server and GUI</Modal.Header>
+                <Modal.Body>
                     <br/>
                     <Container>
-                        <YoutubePlayer
+                        {/* <YoutubePlayer
                             url="https://www.youtube.com/embed/pJL4blsaWbU"
                             playing={false}
                             controls
                             origin="http://localhost:3000"
                            
-                        />
+                        /> */}
                     </Container>
                     <Container>This project was set in 2 stages. The first one being a chat server in which we used telnet to send commands to the port opened for the server to parse commands that the server was supposed to implement. The second stage was making a GUI using QT Creator which we were the first class to have ever used it.
                     <h1>First stage</h1>
@@ -128,36 +134,37 @@ class Projects extends Component {
                     getMessages, is called when room is updated
                     getUsersinRoom, getAllUsers, getAllRooms, are the last methods of the server.
                     </p></Container>
-                </ModalBody>
+                </Modal.Body>
                 
             </Modal>
             //busterchat
             <Modal isOpen={this.state.modalOpen && this.select("busterchat")} toggle={()=> this.toggle()}  className="busterchat">
-                <ModalHeader toggle={()=>this.toggle()}>Busterchat</ModalHeader>
-                <ModalBody>
+                <Modal.Header toggle={()=>this.toggle()}>Busterchat</Modal.Header>
+                <Modal.Body>
                         <br/>
 
                         <p>
                             Throughout CS180, some of our earlier projects involved editing images using a helper class of Pixel, this project uses those files in Android Studio to achieve an app that is similar to snapchat. We had to ask for permission once to use the camera and then added some possible filters.
                         </p>
-                </ModalBody>
+                </Modal.Body>
             </Modal>
             //myroom
             <Modal isOpen={this.state.modalOpen && this.select("myroom")} toggle={()=> this.toggle()}  className="myroom" size="lg">
-                <ModalHeader toggle={()=>this.toggle()}>Room model</ModalHeader>
-                <ModalBody>
+                <Modal.Header toggle={()=>this.toggle()}>Room model</Modal.Header>
+                <Modal.Body>
                     <br/>
                     <Container>
-                    <YoutubePlayer
+                    {/* <YoutubePlayer
                     url="https://www.youtube.com/embed/qT6FQXKmOrg"
-                    />
+                    /> */}
+
                     </Container>
                     <Container>
                     <p>
                     This was the first environment model assigned in my first modeling class. I chose to model my room, but I struggled with the polygons on the guitar model for a while.
                     </p></Container>
                         
-                </ModalBody>
+                </Modal.Body>
             </Modal>
             
 
@@ -168,4 +175,5 @@ class Projects extends Component {
 
 //youtube's embed  <iframe title="irc" width="560" height="315" src="https://www.youtube.com/embed/pJL4blsaWbU" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
 // room <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 export default Projects

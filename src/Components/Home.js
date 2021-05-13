@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
+
+import Container from 'react-bootstrap/Container'
+
 //import { Route } from 'react-router-dom'
-import {
-    Container,
+// import {
+//     Container,
     
-} from 'reactstrap'
-
-
-import BackgroundSlider from 'react-background-slider'
-import img0 from './backgroundimages/me0.jpg'
-import img1 from './backgroundimages/me1.jpg'
-import img2 from './backgroundimages/me2.jpg'
-import img3 from './backgroundimages/me3.jpg'
-import img4 from './backgroundimages/me4.jpg'
-import img5 from './backgroundimages/me5.jpg'
-import img6 from './backgroundimages/m36.png'
+// } from 'reactstrap'
+// import BackgroundSlider from 'react-background-slider'
+// import img0 from '../backgroundimages/me0.jpg'
+// import img1 from '../backgroundimages/me1.jpg'
+// import img2 from '../backgroundimages/me2.jpg'
+// import img3 from '../backgroundimages/me3.jpg'
+// import img4 from '../backgroundimages/me4.jpg'
+// import img5 from '../backgroundimages/me5.jpg'
+// import img6 from '../backgroundimages/m36.png'
 
 class Home extends Component {
 
@@ -21,7 +22,8 @@ class Home extends Component {
         
         return(
             <div className="home" >
-                <BackgroundSlider images={images} />
+                
+                {/* <BackgroundSlider images={images} />
                     <br/>
                     <Container style={{textAlign:'left',paddingTop:'10%',color:'white', float:'left', display:'block'}}>
                     <h1 style={{width:'100%',height:'50%', }}>
@@ -35,7 +37,7 @@ class Home extends Component {
                     <Container>
                     
                   
-                    </Container>
+                    </Container> */}
 
 
 
@@ -46,7 +48,7 @@ class Home extends Component {
 
 //todo in the future maybe, pull images from my instagram 8^)
 
-const images = [img0,img1,img2,img3,img4,img5,img6]
+// const images = [img0,img1,img2,img3,img4,img5,img6]
 
 
 
